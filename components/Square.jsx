@@ -2,10 +2,10 @@ import React from 'react';
 import { Button } from 'react-native';
 
 const style = {
-    background: 'lightblue',
+    background: 'lightorange',
     border: '3px solid darkblue',
-    fontSize: '30px',
-    fontWeight: '800',
+    fontSize: '50px',
+    fontWeight: '720',
     cursor: 'pointer',
     outline: 'none'
 };

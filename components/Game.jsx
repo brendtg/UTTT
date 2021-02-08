@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { calculateWinner } from '../tools/calculateWinner';
 import Board from './Board';
-import Square from './Square';
 
 const styles = {
     width: '200px',
@@ -14,17 +13,14 @@ const Game = () => {
     const [board, setBoard] = useState(Array(9).fill(null));
     const [xIsNext, setXisNext] = useState(true);
     const winner = calculateWinner(board);
+    const [currentBoard, setCurrentBoard] = useState('');
 
     const handleClick = i => {
-        const boardCopy = [...board];
-        if (winner || boardCopy[i]) return;
-        boardCopy[i] = xIsNext ? 'X' : 'O';
-        setBoard(boardCopy);
+        const tempBoard = [...board];
+        if (winner || tempBoard[i]) return;
+        tempBoard[i] = xIsNext ? 'X' : 'O';
+        setBoard(tempBoard);
         setXisNext(!xIsNext);
-    }
-
-    const jumpTo = () => {
-
     }
 
     const renderMoves = () => (
