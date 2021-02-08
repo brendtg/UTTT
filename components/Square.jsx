@@ -1,8 +1,9 @@
 import React from 'react';
+import { Button } from 'react-native';
 
 const style = {
     background: 'lightblue',
-    border: '2px solid darkblue',
+    border: '3px solid darkblue',
     fontSize: '30px',
     fontWeight: '800',
     cursor: 'pointer',
